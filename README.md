@@ -47,3 +47,10 @@ Per calcolare la distanza semantica tra i topics ottenuti, per dedurne l'eteroge
 Il cliente è una compagnia di assicurazioni che ha fornito un'assicurazione sanitaria ai suoi clienti e ha bisogno di costruire un modello predittivo in grado di prevedere se gli assicurati dell'anno passato potrebbero essere interessati ad acquistare anche un'assicurazione per il proprio veicolo. Questo è molto utile per l'azienda in quanto può raggiungere tali clienti e ottimizzare i suoi ricavi.
 
 Poichè il dataset risulta fortemente sbilanciato, sono stati utilizzati diversi approcci (oversampling, undersampling e class_weight balanced) per trovare il modello con le migliori performance. Il modello scelto è una regressione logistica e le previsioni ottenute sono state salvate nel file Excel predictions.
+
+### [Affidabilità creditizia per il rilascio delle carte di credito](https://github.com/ellip91/Affidabilit-Creditizia-per-il-Rilascio-della-Carta-di-Credito)
+<img src="https://github.com/ellip91/Images/blob/main/bonus-carta-di-credito.jpeg" alt="carta" width="200"/>
+
+Questo progetto prevede la creazione di un modello in grado di stimare l'affidabilità creditizia dei clienti, al fine di aiutare il team dedicato a comprendere se accettare o meno la richiesta per il rilascio della carta di credito. A tale scopo, dopo aver effettuato un preprocessing dei dati, testo diversi modelli tra cui regressione logistica, naive bayes, SVM e random forest.
+
+In base ai modelli testati il random forest classifier è quello che da migliori risultati in termini di AUC e log loss. Inoltre, dalla matrice di confusione ottenuta possiamo vedere che il modello riconosce bene i veri negativi e questo permette di escludere le persone poco affidabili dal rilascio della carta di credito.
