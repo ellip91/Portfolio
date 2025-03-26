@@ -1,24 +1,5 @@
 # Data Science Portfolio
-This Portfolio is a compilation of all the Data Science projects I have done during master, self-learning and hobby purposes. 
-
-
-
-## Projects
-
-<div style="display: flex; align-items: center;">
-  <!-- Immagine -->
-  <img src="https://github.com/ellip91/Images/raw/main/vegan%20store.jpg" alt="Vegan Store" width="200" style="margin-right: 20px;"/>
-
-  <!-- Testo (Titolo + Descrizione) -->
-  <div>
-    <h3>[Software gestionale negozio vegano](https://github.com/ellip91/Software-gestionale-negozio-vegano.git)</h3>
-    <p>Questo software gestionale è pensato per ottimizzare le operazioni quotidiane di un negozio vegano, dalla gestione dell'inventario alla vendita dei prodotti.</p>
-  </div>
-</div>
-
-
-
-
+Questo portfolio raccoglie tutti i progetti di Data Science che ho realizzato durante il mio master, nel mio percorso di auto-apprendimento e per pura passione.
 
 
 ## Projects
@@ -27,26 +8,14 @@ This Portfolio is a compilation of all the Data Science projects I have done dur
 ### [Software gestionale negozio vegano](https://github.com/ellip91/Software-gestionale-negozio-vegano.git) 
 <img src="https://github.com/ellip91/Images/raw/main/vegan%20store.jpg" alt="Vegan Store" width="200"/> 
 
-Il progetto consiste nel creare un software gestionale per un negozio vegano.
+Questo software gestionale è pensato per ottimizzare le operazioni quotidiane di un negozio vegano, dalla gestione dell'inventario alla vendita dei prodotti.
 
-Il software ha le seguenti funzionalità:
+### [Analisi descrittiva del mercato immobiliare in Texas](https://github.com/ellip91/Analisi-statistica-descrittiva-del-mercato-immobiliare.git)
+<img src="https://github.com/ellip91/Images/blob/main/mercato-immobiliare.jpg" alt="mercato-immobiliare" width="200"/> 
 
--Registrare nuovi prodotti, con nome, quantità, prezzo di vendita e prezzo di acquisto.
--Elencare tutti i prodotti presenti.
--Registrare le vendite effettuate.
--Mostrare i profitti lordi e netti.
--Mostrare un menu di aiuto con tutti i comandi disponibili.
-
-I comandi disponibili sono i seguenti:
-
--aggiungi: aggiungi un prodotto al magazzino
--elenca: elenca i prodotto in magazzino
--vendita: registra una vendita effettuata
--profitti: mostra i profitti totali
--aiuto: mostra i possibili comandi
--chiudi: esci dal programma
-
-Il programma crea un file csv in cui vengono registrate le vendite e i prodotti presenti in magazzino.
+Questo progetto mostra l'analisi esplorativa del mercato immobiliare in texas.
+Sono stati calcolati gli indici di posizione, forma e variabilità per le veriabili di interesse, valutando anche l'efficacia degli annunci di vendita e la distribuzione delle vendite degli immobili nelle diverse città.
+L'analisi è stata condotta usando R e l'output report è un file pdf ottenuto tramite l'utilizzo del RMarkdown.
 
 
 
