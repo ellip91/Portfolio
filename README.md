@@ -25,5 +25,19 @@ I dati presenti nel dataset includono 2500 osservazioni raccolte da 3 differenti
 Per prevedere il peso del nascituro, è stata studiata l'influenza di ciascuna variabile sulla variabile di risposta Peso al fine di creare un modello di regressione lineare multipla. Sono stati eseguiti vari test, come il Test di Correlazione, il Test T di Student e il Test del Chi Quadrato, per verificare varie ipotesi. L'analisi è stata condotta utilizzando R,  mentre per la visualizzazione dei dati è stato utilizzato ggplot2.
 
 
+### [Software anti-spam](https://github.com/ellip91/Spam-Detection.git) 
+<img src="https://github.com/ellip91/Images/blob/main/spam.jpeg" alt="spam" width="200"/>
 
+Il responsabile di una azienda ha richiesto di identificare le email di tipo SPAM sulle quali fare analisi contenutistiche.
+Nel dettaglio viene richiesto di:
+- Addestrare un classificatore per identificare SPAM
+- Individuare i Topic principali tra le email SPAM presenti nel dataset
+- Calcolare la distanza semantica tra i topics ottenuti, per dedurne l'eterogeneità.
+- Estrarre dalle mail NON SPAM le Organizzazioni presenti.
+
+Il dataset è in formato csv. Dopo aver effettuato un'analisi esplorativa del dataset, si è proceduto con il preprocessing che include pulizia del dataset (rimozione punteggiature,lemming, stemming, lemmatization e rimozione stopwords e numeri) e la vettorizzazione tramite la funzione bow_tfidf(). Si addestra il modello di classificazione, partendo da un modello semplice come la logistic regression.
+Per i punti successivi utilizzo tecniche di NLP.
+Al fine di individuare i Topic principali tra le email SPAM presenti nel dataset è stato creato il dizionario e il corpus tramite doc2bow() che verrà utilizzato dal modello LDA. 
+Per identificare i topic di maggior rilevanza, ho utilizzato Counter() per aggregare le probabilità dei topic per ciascun documento nel corpus generato dal modello LDA e il metodo most_common() dell'oggetto Counter, che restituisce una lista delle N tuple (topic_id, count) più comuni.
+Per calcolare la distanza semantica tra i topics ottenuti, per dedurne l'eterogeneità, ho utilizzato cosine_similarity(), mentre per estrarre le organizzazioni nelle mail non spam faccio ricorso alla tecnica di Named Entity Recognition (NER)
 
