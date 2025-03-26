@@ -41,3 +41,9 @@ Al fine di individuare i Topic principali tra le email SPAM presenti nel dataset
 Per identificare i topic di maggior rilevanza, ho utilizzato Counter() per aggregare le probabilità dei topic per ciascun documento nel corpus generato dal modello LDA e il metodo most_common() dell'oggetto Counter, che restituisce una lista delle N tuple (topic_id, count) più comuni.
 Per calcolare la distanza semantica tra i topics ottenuti, per dedurne l'eterogeneità, ho utilizzato cosine_similarity(), mentre per estrarre le organizzazioni nelle mail non spam faccio ricorso alla tecnica di Named Entity Recognition (NER)
 
+### [Cross-selling di polizze assicurative](https://github.com/ellip91/Cross-selling-di-polizze-assicurative.git)
+<img src="https://github.com/ellip91/Images/blob/main/polizza-vita-rami-polizze-assicurative.jpg" alt="polizze" width="200"/>
+
+Il cliente è una compagnia di assicurazioni che ha fornito un'assicurazione sanitaria ai suoi clienti e ha bisogno di costruire un modello predittivo in grado di prevedere se gli assicurati dell'anno passato potrebbero essere interessati ad acquistare anche un'assicurazione per il proprio veicolo. Questo è molto utile per l'azienda in quanto può raggiungere tali clienti e ottimizzare i suoi ricavi.
+
+Poichè il dataset risulta fortemente sbilanciato, sono stati utilizzati diversi approcci (oversampling, undersampling e class_weight balanced) per trovare il modello con le migliori performance. Il modello scelto è una regressione logistica e le previsioni ottenute sono state salvate nel file Excel predictions.
