@@ -6,7 +6,7 @@ Questo portfolio raccoglie tutti i progetti di Data Science che ho realizzato du
 
   
 ### [Software gestionale negozio vegano](https://github.com/ellip91/Software-gestionale-negozio-vegano.git) 
-<img src="https://github.com/ellip91/Images/raw/main/vegan%20store.jpg" alt="Vegan Store" width="200"/> 
+<img src="https://raw.githubusercontent.com/ellip91/Images/main/vegan%20store.jpg?token=GHSAT0AAAAAADBFG5E2U3FSPEH3NJ5MXJECZ7D5RTA" alt="Vegan Store" width="200"/> 
 
 Questo software gestionale è pensato per ottimizzare le operazioni quotidiane di un negozio vegano, dalla gestione dell'inventario alla vendita dei prodotti.
 
