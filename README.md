@@ -11,7 +11,8 @@ Questo portfolio raccoglie tutti i progetti di Data Science che ho realizzato du
 Questo software gestionale è pensato per ottimizzare le operazioni quotidiane di un negozio vegano, dalla gestione dell'inventario alla vendita dei prodotti.
 
 ### [Analisi descrittiva del mercato immobiliare in Texas](https://github.com/ellip91/Analisi-statistica-descrittiva-del-mercato-immobiliare.git)
-<img src="https://github.com/ellip91/Images/blob/main/mercato-immobiliare.jpg" alt="mercato-immobiliare" width="200"/> 
+<img src="https://github.com/ellip91/Images/blob/main/mercato-immobiliare.jpg" alt="mercato" width="200"/>
+
 
 Questo progetto mostra l'analisi esplorativa del mercato immobiliare in texas.
 Sono stati calcolati gli indici di posizione, forma e variabilità per le veriabili di interesse, valutando anche l'efficacia degli annunci di vendita e la distribuzione delle vendite degli immobili nelle diverse città.
@@ -54,3 +55,24 @@ Poichè il dataset risulta fortemente sbilanciato, sono stati utilizzati diversi
 Questo progetto prevede la creazione di un modello in grado di stimare l'affidabilità creditizia dei clienti, al fine di aiutare il team dedicato a comprendere se accettare o meno la richiesta per il rilascio della carta di credito. A tale scopo, dopo aver effettuato un preprocessing dei dati, testo diversi modelli tra cui regressione logistica, naive bayes, SVM e random forest.
 
 In base ai modelli testati il random forest classifier è quello che da migliori risultati in termini di AUC e log loss. Inoltre, dalla matrice di confusione ottenuta possiamo vedere che il modello riconosce bene i veri negativi e questo permette di escludere le persone poco affidabili dal rilascio della carta di credito.
+
+### [Filtro anti-hater per social network](https://github.com/ellip91/Filtro-Anti-Hater-per-Social-Network)
+<img src="https://github.com/ellip91/Images/blob/main/social%20media.jpg" alt="social" width="200"/>
+
+
+In questo progetto si costruisce un modello in grado di filtrare i commenti degli utenti in base al grado di dannosità del linguaggio.
+
+PREPROCESSING:
+-Effettuo il preprocessing: Definisco la funzione preprocess_text. Questa funzione esegue la rimozione di punteggiatura, conversione a minuscolo, tokenizzazione, rimozione delle stopwords e lemmatizzazione.
+-Separo le features dalle label: Separo i commenti preprocessati (X) dalle etichette (y)
+-Divido il dataset in train e test: Utilizziamo train_test_split per dividere il dataset in dati di training e di test.
+
+CREAZIONE DEL MODELLO: 
+Inizio con l'addestramento e la valutazione di due modelli più semplici per la classificazione di testi: la regressione logistica e il Naive Bayes. Nel primo caso utilizzo LogisticRegression con il parametro class_weight='balanced' in quanto abbiamo sbilanciamento di classi. Nel caso sei Naive Bayes addestro diversi modelli per vedere quale performa meglio. In entrambi i casi, trasformo i testi in feature numeriche tramite TfidfVectorizer. Inoltre, tramite OneVsRestClassifier adatterò modelli di classificazione binaria a problemi di classificazione multilabel. 
+Le metriche da tenere in considerazione per la valutazione del modello sono l'F1-score, la precisione e il recall, più appropriate perché tengono conto dello sbilanciamento delle classi e della natura multilabel del problema. 
+La regressione Logistica performa meglio del naive Bayes in questo problema di classificazione multilabel ma le metriche non sono ancora ottimali. Testo allora l'utilizzo delle reti neurali ricorrenti, adatte a questo tipo di problemi.
+
+Per la RNN eseguo un ulteriore preprocessing del dataset:
+Tokenizzazione e Padding: I testi vengono tokenizzati e trasformati in sequenze di numeri interi e di lunghezza uniforme. Per la costruzione del modello creiamo una RNN che utilizza strati LSTM mentre l'output utilizza l'attivazione sigmoid per gestire la classificazione multilabel. Sia per Early Stopping che per compile monitoriamo come metrica l'f1 score.
+
+Il prodello prescelto per le previsioni è un LSTM con dropout.
